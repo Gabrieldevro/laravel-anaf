@@ -1,0 +1,34 @@
+{
+    "name": "gabrieldevro/laravel-anaf",
+    "description": "Look up Romanian companies by CUI/CIF from the official ANAF API in Laravel: name, address, VAT status, e-Factura, inactive status. Cached, batched, validated.",
+    "keywords": ["laravel", "anaf", "romania", "cui", "cif", "company", "vat", "tva", "e-factura", "efactura", "onrc", "checkout", "invoice"],
+    "license": "MIT",
+    "authors": [
+        { "name": "Gabriel Conolache", "email": "contact@gabrieldev.eu", "homepage": "https://gabrieldev.eu" }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/validation": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0|^11.0",
+        "phpunit/phpunit": "^11.5|^12.0"
+    },
+    "autoload": {
+        "psr-4": { "Gabrieldev\\Anaf\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Gabrieldev\\Anaf\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Gabrieldev\\Anaf\\AnafServiceProvider"],
+            "aliases": { "Anaf": "Gabrieldev\\Anaf\\Facades\\Anaf" }
+        }
+    },
+    "scripts": { "test": "phpunit" },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
